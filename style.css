@@ -1,0 +1,556 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+/* Resets */
+* {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after,
+p,
+h2,
+input,
+.input-icon {
+  transition: all 0.5s;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  color: #383838;
+  background: #fcfcfd;
+}
+h2 {
+  font-size: 2.4rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+p {
+  margin-bottom: 20px;
+}
+p a {
+  font-size: 110%;
+  font-weight: 800;
+  color: #383838;
+}
+p a:hover {
+  color: #ffd500;
+}
+
+/* Input Placeholder */
+::-webkit-input-placeholder {
+  color: #a5c0c9;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: #a5c0c9;
+  opacity: 1;
+}
+::-ms-input-placeholder {
+  color: #a5c0c9;
+  opacity: 1;
+}
+::-moz-placeholder {
+  color: #a5c0c9;
+  opacity: 1;
+}
+::placeholder {
+  color: #a5c0c9;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  color: #a5c0c9;
+}
+::-ms-input-placeholder {
+  color: #a5c0c9;
+}
+
+/* Flex */
+.app,
+.app .container,
+.app .col.banner,
+.app .container .col.banner .banner-inner,
+.toggle-icon,
+.form-group,
+.form-group .input-container,
+.form-group .input-container .checkbox-label,
+.form-group .input-icon {
+  display: flex;
+  align-items: center;
+}
+
+/* Absolute Position */
+.content-box.details,
+.btn:before {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Animations */
+.fadeUp,
+.fadeRight,
+.fadeDown {
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.fadeUp.anime-1 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+.fadeUp {
+  -webkit-animation-name: fadeUp;
+  animation-name: fadeUp;
+}
+.fadeRight {
+  -webkit-animation-name: fadeRight;
+  animation-name: fadeRight;
+}
+.fadeUp.anime-1,
+.fadeRight.anime-1 {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+.fadeUp.anime-2,
+.fadeRight.anime-2 {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+.fadeUp.anime-3,
+.fadeRight.anime-3 {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+}
+.fadeUp.anime-4,
+.fadeRight.anime-4 {
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+}
+
+/* Container */
+.app {
+  min-height: 100vh;
+  overflow: visible;
+}
+.app .container {
+  width: 1200px;
+  height: 800px;
+  margin: 20px auto;
+  background: #ffffff;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.05);
+  border-radius: 2.4rem;
+  overflow: hidden;
+}
+.app .container .col {
+  height: 100%;
+}
+.app.loading .container {
+  -webkit-animation: loading ease 2.5s;
+  animation: loading ease 2.5s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+/* Banner */
+.app .container .col.banner {
+  width: 40%;
+  text-align: center;
+  justify-content: center;
+  align-items: stretch;
+  padding: 100px 0;
+  background: #ffd500;
+  z-index: 1;
+  transition: width 1.25s;
+}
+.app .container .col.banner .banner-inner {
+  min-height: 70%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.app .container .col.banner .banner-inner p {
+  font-size: 1.25rem;
+  padding: 0 10%;
+  max-width: 480px;
+}
+
+/* Content */
+.app .container .col.content {
+  width: 60%;
+  overflow: hidden;
+  z-index: 0;
+  transition: width 1.25s;
+}
+.app .container .col.content .content-box {
+  padding: 80px;
+  background: #fff;
+}
+.app .container .col.content .content-box.details {
+  visibility: hidden;
+  background: #ff9200;
+  left: -100%;
+  border-radius: 0 2.4rem 2.4rem 0;
+  transition: all 0.6s;
+}
+.app .container .col.content .content-box.details p,
+.app .container .col.content .content-box.details h2 {
+  display: none;
+}
+.app .container .col.content .content-box.details p {
+  margin-top: 35px;
+  line-height: 1.85;
+}
+.app .container.active .col.content .content-box.details {
+  visibility: visible;
+  left: 0;
+}
+.app .container.active .col.content .content-box.details p,
+.app .container.active .col.content .content-box.details h2 {
+  display: block;
+}
+
+/* Icons */
+.toggle-icon,
+.input-icon {
+  border-radius: 100px;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.35s;
+}
+.toggle-icon {
+  width: 60px;
+  height: 60px;
+  background: #383838;
+}
+.input-icon {
+  width: 46px;
+  height: 46px;
+  position: absolute;
+  left: 0;
+}
+input[type="date"] ~ .input-icon {
+  left: auto;
+  right: 0;
+  background: transparent;
+  border-color: transparent;
+  pointer-events: none;
+}
+.toggle-icon svg,
+.input-icon svg {
+  transform: scale(0.75) rotate(0deg);
+  transition: 0.45s;
+}
+.toggle-icon:hover,
+.input-icon:hover,
+input:checked ~ .input-icon {
+  transform: scale(1.1);
+}
+input:checked ~ .input-icon {
+  background: #b1bfcd;
+}
+.toggle-icon:hover svg,
+.input-icon:hover svg,
+input:checked ~ .input-icon svg {
+  transform: scale(0.95);
+}
+.checkbox-label:hover input ~ .input-icon,
+input:focus {
+  border: 1px solid #c5d7dc;
+}
+input:checked ~ .input-icon svg path,
+input:checked ~ .input-icon svg ellipse,
+input:checked ~ .input-icon svg rect {
+  fill: #fff;
+}
+
+/* Active Toggle */
+.active .toggle-icon svg {
+  transform: scale(0.75) rotate(180deg);
+}
+
+/* Forms */
+fieldset {
+  border: none;
+}
+input,
+.input-icon {
+  background: #f5f8f9;
+  border: 1px solid #f5f8f9;
+}
+input {
+  padding: 10px 18px;
+  color: #a5c0c9;
+  width: 100%;
+}
+input,
+.btn {
+  height: 46px;
+  line-height: 46px;
+  outline: none;
+  border-radius: 6px;
+}
+input:focus {
+  color: #000;
+  background: #fcfcfd;
+}
+input[type="radio"] {
+  width: 46px;
+  height: 46px;
+  margin-right: 15px;
+  opacity: 0;
+  border-radius: 100px;
+}
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+.form-group {
+  margin-bottom: 24px;
+}
+.form-group .label {
+  width: 30%;
+}
+.form-group .input-container {
+  width: 70%;
+  color: #a5c0c9;
+  flex-wrap: wrap;
+}
+.form-group .input-container .checkbox-label {
+  margin: 5px 15px 5px 0;
+}
+.form-group:last-of-type {
+  margin-top: 50px;
+  justify-content: flex-end;
+}
+
+/* Buttons */
+.btn {
+  min-width: 140px;
+  text-transform: uppercase;
+  margin: 35px 0 0 16px;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+.btn.save {
+  color: white;
+  background: #60e6c5;
+}
+.btn:before {
+  content: "";
+  right: 0;
+  width: 0;
+  background-color: #383838;
+  mix-blend-mode: soft-light;
+}
+.btn:hover:before {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+
+/* Animations */
+@-webkit-keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes fadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes loading {
+  0% {
+    transform: scale(2.5, 2.5);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes loading {
+  0% {
+    transform: scale(2.5, 2.5);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+}
+
+/* Loader Animation */
+.app.loading {
+  overflow: hidden;
+}
+.app.loading .col.banner {
+  width: 100%;
+}
+.app.loading .col.content {
+  width: 0%;
+}
+.app.loading .col.banner .banner-inner-,
+.app.loading .col.content .form {
+  display: none;
+}
+
+/* Media Querries */
+@media (max-width: 1280px) {
+  .app .container {
+    width: 84%;
+    min-height: 650px;
+  }
+  .app .container .col.content .content-box {
+    padding: 80px 7.5%;
+  }
+  .banner h2 {
+    padding: 0 5%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 992px) {
+  /* Remove flex */
+  .app .container,
+  .app .col,
+  .form-group,
+  form .form-group .label,
+  .btn {
+    display: block;
+  }
+
+  /* Reset width */
+  .app .container .col.banner,
+  .app .container .col.content,
+  .form-group .label,
+  .form-group .input-container,
+  .btn {
+    width: 100%;
+  }
+  .app .container {
+    height: 100%;
+    width: 500px;
+  }
+
+  /* Spacing */
+  .app .container .col.banner,
+  .app .container .col.content {
+    padding: 70px 20px;
+  }
+  .app .container .col.content .content-box {
+    padding: 60px 35px 0;
+  }
+  .app .container .col.banner .banner-inner {
+    min-height: 500px;
+  }
+
+  /* Font-sizes */
+  h2 {
+    font-size: 2rem;
+  }
+  .app .container .col.banner .banner-inner p {
+    font-size: 1.05rem;
+  }
+
+  /* Slider Mobile */
+  .app .container .col.content .content-box.details {
+    border-radius: 0 0 2.4rem 2.4rem;
+    top: -100%;
+    left: 0;
+  }
+  .app .container.active .col.content .content-box.details {
+    top: 0;
+  }
+  .fadeRight {
+    -webkit-animation-name: fadeDown;
+    animation-name: fadeDown;
+  }
+
+  /* Forms */
+  .form-group {
+    margin-bottom: 30px;
+  }
+  .form-group .label {
+    margin-bottom: 10px;
+  }
+
+  /* Toggle Icon */
+  .toggle-icon svg {
+    transform: scale(0.75) rotate(90deg);
+  }
+  .toggle-icon:hover svg {
+    transform: scale(0.95) rotate(90deg);
+  }
+  .active .toggle-icon svg {
+    transform: scale(0.95) rotate(-90deg);
+  }
+
+  /* Buttons */
+  .btn {
+    margin: 15px 0 15px 0;
+  }
+}
+@media (max-width: 768px) {
+  .app .container {
+    width: 90%;
+  }
+}

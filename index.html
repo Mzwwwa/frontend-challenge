@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-end Challenge</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="app loading">
+        <div class="container">
+            <div class="col banner">
+                <div class="banner-inner">
+                    <img src="face.svg" alt="Profile" width="200" class="fadeUp anime-1">  
+                    <div>
+                        <h2 class="fadeUp anime-2">Front-end challenge!</h2>
+                        <p class="fadeUp anime-3">This is a design that you will need to code up and impress us.</p>                    
+                    </div>
+                    <div onclick="toggleDetails();" class="toggle-icon fadeUp anime-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="29" viewBox="0 0 17 29">
+                            <path fill="#FFD300" fill-rule="evenodd" d="M16.969 14.502c0-.519-.195-1.038-.585-1.433L4.128.619a1.974 1.974 0 0 0-2.823 0 2.05 2.05 0 0 0 0 2.867L12.15 14.502 1.306 25.518a2.05 2.05 0 0 0 0 2.867c.78.793 2.043.793 2.823 0l12.256-12.45a2.04 2.04 0 0 0 .584-1.433"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="col content" id="content">                
+                <div class="content-box form  fadeRight anime-3">                
+                    <form id="userForm">
+                        <fieldset>
+                            <div class="form-group">                            
+                                <label for="name" class="label">Name</label>
+                                <div class="input-container">  
+                                    <input type="text" id="name" name="name" placeholder="John Doe">
+                                </div>
+                            </div>
+                            <div class="form-group">                            
+                                <label for="male" class="label">Gender</label>
+                            <div class="input-container"> 
+                                    <label for="male" class="checkbox-label">
+                                        <input type="radio" id="male" name="gender"> Male   
+                                        <span class="input-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                                                    <path fill="#B1BFCD" d="M10.945 22.988c4.683 0 8.494-3.795 8.533-8.425.04-4.674-3.715-8.627-8.521-8.636-4.698-.008-8.524 3.814-8.525 8.529a8.504 8.504 0 0 0 8.513 8.532M17.76 5.875L21.13 2.5c-.293 0-.58.004-.869-.001-.253-.005-.509.002-.758-.033-.63-.089-1.05-.658-.998-1.322a1.19 1.19 0 0 1 1.167-1.07 672.95 672.95 0 0 1 4.492 0 1.157 1.157 0 0 1 1.147 1.058c.03.378.022.76.022 1.14-.002 1.167.01 2.333-.02 3.499-.018.667-.575 1.152-1.224 1.135-.661-.017-1.17-.538-1.18-1.215-.006-.452-.003-.904-.006-1.356 0-.015-.009-.03.002.004l-3.34 3.345c1.948 2.537 2.713 5.464 2.16 8.697-.467 2.739-1.84 4.972-4.01 6.698-4.29 3.412-10.565 3.06-14.428-.792-3.986-3.975-4.399-10.214-.958-14.579 1.217-1.544 2.734-2.7 4.561-3.43a10.803 10.803 0 0 1 5.665-.66 10.76 10.76 0 0 1 5.204 2.257" mask="url(#b)"/>
+                                            </svg>
+                                        </span>                                                                        
+                                    </label>
+                                    <label for="female" class="checkbox-label">
+                                        <input type="radio" id="female" name="gender"> Female   
+                                        <span class="input-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="30" viewBox="0 0 22 30">
+                                                <path fill="#B1BFCD" fill-rule="evenodd" d="M18.746 10.551c-.001-4.504-3.671-8.206-8.137-8.207-4.58-.002-8.258 3.65-8.258 8.2 0 4.537 3.668 8.219 8.194 8.224 4.518.005 8.202-3.686 8.201-8.217m-7.03 16.234c0 .574.004 1.122-.002 1.67-.005.582-.354 1.042-.875 1.17-.76.186-1.441-.35-1.456-1.153-.008-.473-.001-.947-.001-1.42v-.267h-1.51c-.705 0-1.219-.47-1.237-1.131-.018-.672.484-1.183 1.197-1.202.434-.012.869-.003 1.303-.003h.247v-.455c0-.893-.008-1.786.005-2.68.003-.224-.062-.283-.285-.318-3.485-.549-6.128-2.355-7.82-5.45C-.896 11.558-.248 6.698 2.84 3.376 4.572 1.516 6.712.417 9.23.087c5.409-.705 10.491 2.926 11.622 8.287a10.533 10.533 0 0 1-4.887 11.22 10.462 10.462 0 0 1-4.067 1.417c-.112.015-.184.036-.184.173.003 1.076.002 2.152.002 3.265h.253c.465.002.93-.012 1.395.01.606.031 1.051.487 1.097 1.087a1.154 1.154 0 0 1-.926 1.215c-.14.03-.287.022-.432.023-.455.003-.91.001-1.388.001"/>
+                                            </svg>                                        
+                                        </span>                                                                         
+                                    </label>
+                                </div> 
+                            </div>
+                            <div class="form-group">
+                                <label for="date" class="label">Date of Birth</label>
+                                <div class="input-container">  
+                                    <input type="date" id="date" placeholder="01/02/1983" value="1983-02-01" min="1983-02-0" max="2030-01-01">
+                                    <span class="input-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                            <g fill="none" fill-rule="evenodd">
+                                                <path stroke="#B1BFCD" stroke-linecap="square" stroke-width="2.442" d="M2 3.602h15.87v14.407H2z"/>
+                                                <path stroke="#B1BFCD" stroke-linecap="square" stroke-width="4.885" d="M3.22 6.003H16.65"/>
+                                                <path stroke="#F5F8F9" stroke-width="4.885" d="M14.207 0v6.003"/>
+                                                <path stroke="#B1BFCD" stroke-width="2.442" d="M14.207 0v4.802"/>
+                                                <g>
+                                                    <path stroke="#F5F8F9" stroke-width="4.885" d="M5.662 0v6.003"/>
+                                                    <path stroke="#B1BFCD" stroke-width="2.442" d="M5.662 0v4.802"/>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-group">                            
+                                <label for="email" class="label">Email</label>
+                                <div class="input-container">  
+                                    <input type="email" id="email" email="name" placeholder="johndoe@mail.com">
+                                </div>
+                            </div>
+                            <div class="form-group">                            
+                                <label for="mobile" class="label">Mobile</label>
+                                <div class="input-container">  
+                                    <input type="tel" id="mobile" name="mobile" placeholder="+91 98765 43210">
+                                </div>
+                            </div>
+                            <div class="form-group">                            
+                                <label for="customerId" class="label">Customer ID</label>
+                                <div class="input-container">  
+                                    <input type="text" id="customerId" name="customerId" placeholder="576803-ERD0348 45">
+                                </div>
+                            </div>
+                            <div class="form-group">                            
+                                <label for="classic" class="label">Membership</label>
+                            <div class="input-container"> 
+                                    <label for="classic" class="checkbox-label">
+                                        <input type="radio" id="classic" name="membership"> Classic  
+                                        <span class="input-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="19" viewBox="0 0 27 19">
+                                                <g fill="none" fill-rule="evenodd" stroke="#B1BFCD" stroke-width="2.117">
+                                                    <rect width="23.275" height="15.89" rx="2.117"/>
+                                                    <path stroke-linecap="square" d="M0 5.297h22.77"/>
+                                                    <ellipse cx="17.986" cy="10.593" rx="2.116" ry="2.119"/>
+                                                    <ellipse cx="13.754" cy="10.593" rx="2.116" ry="2.119"/>
+                                                </g>
+                                            </svg>
+                                        </span>                                                                          
+                                    </label>
+                                    <label for="silver" class="checkbox-label">
+                                        <input type="radio" id="silver" name="membership"> Silver   
+                                        <span class="input-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="19" viewBox="0 0 27 19">
+                                                <g fill="none" fill-rule="evenodd" stroke="#B1BFCD" stroke-width="2.117">
+                                                    <rect width="23.275" height="15.89" rx="2.117"/>
+                                                    <path stroke-linecap="square" d="M0 5.297h22.77"/>
+                                                    <ellipse cx="17.986" cy="10.593" rx="2.116" ry="2.119"/>
+                                                    <ellipse cx="13.754" cy="10.593" rx="2.116" ry="2.119"/>
+                                                </g>
+                                            </svg>                                       
+                                        </span>                                                                         
+                                    </label>
+                                    <label for="gold" class="checkbox-label">
+                                        <input type="radio" id="gold" name="membership"> Gold   
+                                        <span class="input-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="19" viewBox="0 0 27 19">
+                                                <g fill="none" fill-rule="evenodd" stroke="#B1BFCD" stroke-width="2.117">
+                                                    <rect width="23.275" height="15.89" rx="2.117"/>
+                                                    <path stroke-linecap="square" d="M0 5.297h22.77"/>
+                                                    <ellipse cx="17.986" cy="10.593" rx="2.116" ry="2.119"/>
+                                                    <ellipse cx="13.754" cy="10.593" rx="2.116" ry="2.119"/>
+                                                </g>
+                                            </svg>                                      
+                                        </span>                                                                         
+                                    </label>
+                                </div> 
+                            </div>
+                            <div class="form-group fadeRight anime-4">
+                                <button class="btn reset" type="reset"><span>Cancel</span></button>
+                                <button class="btn save" type="submit"><span>Save</span></button>
+                            </div>
+
+                        </fieldset>
+                    </form>
+                </div>  
+                <div class="content-box details"> 
+                    <h2 class="fadeRight anime-1">My world Today</h2>
+                    <p class="fadeRight anime-2">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. <a href="#">View all days</a> eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat</p>
+                </div>                            
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script> 
+</body>
+</html>
