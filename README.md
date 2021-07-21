@@ -1,5 +1,5 @@
 # frontend-challenge
-Front-end challenge to create a animated UI with sliding details-panel over a form. 
+Front-end challenge to create an animated UI with sliding details-panel over a form. 
 <br>
 
 <strong>Requirements:</strong><br>
